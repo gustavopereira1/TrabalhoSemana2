@@ -1,0 +1,48 @@
+﻿@model GestaoComercial.Models.Cliente
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Deletar</h2>
+
+<h3>Gostaria de excluir este item?</h3>
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeCompletoRazaoSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeCompletoRazaoSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApelidoNomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApelidoNomeFantasia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPFCNJP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPFCNJP)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para a lista", "Index")
+        </div>
+    }
+</div>
